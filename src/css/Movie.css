@@ -1,5 +1,7 @@
 .breadcrumb {
     list-style: none;
+    margin-top:10px;
+    margin-bottom: 10px;
     padding: 0;
     display: flex;
     font-size: 20px;
@@ -45,22 +47,21 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
   }
   
-  .favorites-empty {
+  .favorites-content {
     text-align: center;
     padding: 4rem 2rem;
     background-color: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     margin: 2rem auto;
-    max-width: 600px;
   }
   
-  .favorites-empty h2 {
+  .favorites-content h2 {
     margin-bottom: 1rem;
     font-size: 2rem;
     color: #e50914;
   }
   
-  .favorites-empty p {
+  .favorites-content p {
     color: #999;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -139,13 +140,16 @@
   
   .movies-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1.5rem;
     padding: 1rem;
     width: 100%;
     box-sizing: border-box;
+    justify-content: start;
   }
   .movie-card {
+    max-width: 350px;
+    
     position: relative;
     border-radius: 8px;
     overflow: hidden;

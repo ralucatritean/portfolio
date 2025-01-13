@@ -32,9 +32,28 @@ export const searchMovies = async (query: string) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log('JSON Response:', JSON.stringify(data, null, 2));
         return data.results;
     } catch (error) {
         console.error("Error searching movies:", error);
+        throw error;
+    }
+};
+export const searchMovieById = async (movieId: string) => {
+    try {
+        const response = await fetch(
+            `${BASE_URL}/movie/${movieId}`,
+            options
+        );
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('JSON Response:', JSON.stringify(data, null, 2));
+
+        return data;  // returnăm direct data, nu data.results
+    } catch (error) {
+        console.error("Error searching movies by id:", error);
         throw error;
     }
 };
