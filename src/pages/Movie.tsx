@@ -4,14 +4,18 @@ import Home from "../components/Movie/Home";
 import Favorite from "../components/Movie/Favotite";
 import { MovieProvider } from "../context/MovieContext";
 import Sidebar from "../components/Slidebare/Slidebare";
+import { SidebarContext } from "../context/SlidebarContext";
+import { useContext, useEffect } from "react";
 
 function Movie() {
+    const { isOpen, setIsOpen } = useContext(SidebarContext);
+    
     return <div>
         <div className="container">
             <Sidebar>
                 <div></div>
             </Sidebar>
-            <div className="contentPage">
+            <div className={`contentPage ${isOpen ? 'openContainer' : 'closeContainer'}`}>
                 <MovieProvider>
                     <div className="content">
                         <Routes>

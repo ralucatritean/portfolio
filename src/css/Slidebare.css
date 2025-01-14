@@ -75,7 +75,12 @@
     align-items: baseline;  
     width: 100vw;
     height: 100vh;    
-  
+  }
+  .openContainer{
+    margin-left: 220px;
+  }
+  .closeContainer{
+    margin-left: 40px;
   }
   .myProfile{
     display: flex;
