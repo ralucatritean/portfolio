@@ -1,19 +1,8 @@
 import './css/index.css'
-import { Routes, Route } from 'react-router-dom'
-import Home from './components/Movie/Home'
-import Favorite from './components/Movie/Favotite'
-import { MovieProvider } from './context/MovieContext'
+import Movie from './pages/Movie'
 function App() {
   return (
-    <MovieProvider>
-      <main className="main-content">
-        <Routes>
-          <Route path="/movie" element={<Home />} />
-          <Route path="/favorites" element={<Favorite />} />
-        </Routes>
-      </main>
-    </MovieProvider>
-
+    <Movie/>
   )
 }
 
