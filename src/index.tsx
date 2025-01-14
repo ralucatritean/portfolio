@@ -10,6 +10,9 @@ import MemoryGame from './pages/MemoryGame';
 import SnakeGame from './pages/SnakeGame';
 import Favorite from './components/Movie/Favorite';
 import Home from './components/Movie/Home';
+import Store from './components/Shop/Store';
+import Cart from './components/Shop/Cart';
+
 import {
   createBrowserRouter,
   RouterProvider,
@@ -39,6 +42,16 @@ const router = createBrowserRouter([
       {
         path: "shop",
         element: <Shop />,
+        children:[
+          {
+            path:"",
+            element:<Store/>
+          },
+          {
+            path:"cart",
+            element:<Cart/>
+          }
+        ]
       },
       {
         path: "movie",

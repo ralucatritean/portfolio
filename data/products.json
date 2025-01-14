@@ -1,0 +1,19 @@
+{
+    "products":[
+        {
+            "sku": "item001",
+            "name": "Magnet de frigider",
+            "price": "9.99"
+        },
+        {
+            "sku": "item001",
+            "name": "Cana personalizata",
+            "price": "39.99"
+        },
+        {
+            "sku": "item001",
+            "name": "Body personalizat",
+            "price": "59.99"
+        }
+    ]
+}
