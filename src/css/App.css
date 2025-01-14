@@ -1,6 +1,5 @@
 .main-content {
   flex: 1;
-  padding: 2rem;
   box-sizing: border-box;
   width: 100%;
   display: flex;
@@ -8,6 +7,5 @@
 }
 
 .content {
-  margin-left: 50px;
-  width: 90%;
+  width: 85%;
 }

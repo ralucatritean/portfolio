@@ -15,9 +15,8 @@ function Favorite() {
                 const detailedMovies = await Promise.all(
                     favorites.map(async (movieId) => {
                         const response = await searchMovieById(movieId);
-                        console.log("Răspuns API pentru ID", movieId, ":", response); // să vedem ce primim
-
-                        // Verificăm dacă avem date și le extragem din response.data sau response
+                        console.log("Raspuns API pentru ID", movieId, ":", response);
+                        
                         const data = response?.data || response;
 
                         if (!data) {
@@ -29,13 +28,12 @@ function Favorite() {
                             id: movieId,
                             title: data.title || 'Titlu necunoscut',
                             url: data.homepage || '',
-                            release_date: data.release_date || 'Dată necunoscută',
+                            release_date: data.release_date || 'Data necunoscuta',
                             poster_path: data.poster_path || ''
                         };
                     })
                 );
 
-                // Filtrăm null-urile
                 const validMovies = detailedMovies.filter((movie): movie is MovieProps => movie !== null);
                 setMoviesWithDetails(validMovies);
             } catch (error) {
@@ -47,9 +45,6 @@ function Favorite() {
             fetchMovieDetails();
         }
     }, [favorites]);
-
-    // Debug pentru a vedea ce avem în state
-    console.log("Movies with details:", favorites.length);
 
     if (favorites.length > 0) {
         return (

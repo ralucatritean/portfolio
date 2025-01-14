@@ -1,9 +1,10 @@
-import React, { ReactNode, useContext,useEffect } from 'react'
+import React, { ReactNode, useContext, useEffect } from 'react'
 import { SidebarData } from "./SlidebarData"
 import MyProfile from './MyProfile';
 import MenuButton from './MenuButton';
 import '../../css/Slidebare.css'
 import { SidebarContext } from '../../context/SlidebarContext';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 interface SidebarProps {
     children?: ReactNode;
@@ -11,6 +12,8 @@ interface SidebarProps {
 
 const Sidebar = ({ children }: SidebarProps) => {
     const { isOpen, setIsOpen } = useContext(SidebarContext);
+    const navigate = useNavigate();
+    const location = useLocation();
     
     const toggle = () => setIsOpen(!isOpen);
 
@@ -29,17 +32,15 @@ const Sidebar = ({ children }: SidebarProps) => {
                 <MyProfile/>
             </div>
             <ul className='SidebarList'>{
-                SidebarData.map((val,key) => {
+                SidebarData.map((val, key) => {
                     return (
                         <li
                             key={key}
                             className={`row ${isOpen ? 'openRow' : 'closeRow'}`}
-                            id={window.location.pathname == val.link ? "active" : ""}
-                            onClick={()=> {
-                                window.location.pathname=val.link
-                            }}
+                            id={location.pathname === val.link ? "active" : ""}
+                            onClick={() => navigate(val.link)}
                         >
-                            <div id='icon'> {val.icon}</div>{" "}
+                            <div id='icon'>{val.icon}</div>{" "}
                             <div id='title'>{val.title}</div>
                         </li>
                     )

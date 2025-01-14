@@ -5,36 +5,35 @@ import Game3 from "../../assets/images/snake.png";
 import SHOP from "../../assets/images/shop.png";
 import Movie from "../../assets/images/movie.png";
 
-export const SidebarData=[
+export const SidebarData = [
     {
         title: "CV",
         icon: <img className='iconImage' src={CV} alt="CV Icon" />,
-        link:"/MyCvPage"
+        link: "/myCvPage"
     },
     {
         title: "Tic Tac Toc",
         icon: <img className='iconImage' src={Game1} alt="Tic Tac Toc Game" />,
-        link:"/TicTacToe"
+        link: "/ticTacToe"
     },
-    
     {
         title: "MemoryGame",
         icon: <img className='iconImage' src={Game2} alt="Memory Game" />,
-        link:"/MemoryGame"
+        link: "/memoryGame"
     },
     {
         title: "V Project",
         icon: <img className='iconImage' src={Game3} alt="Snake Game" />,
-        link:"/SnakeGame"
+        link: "/snakeGame"
     },
     {
         title: "Shop",
         icon: <img className='iconImage' src={SHOP} alt="Shop" />,
-        link:"/MyShop"
+        link: "/shop"
     },
     {
         title: "Movie",
         icon: <img className='iconImage' src={Movie} alt="Movie" />,
-        link:"/Movie"
-    }
+        link: "/movie"
+    },
 ]

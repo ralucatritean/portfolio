@@ -1,16 +1,22 @@
 import './css/index.css'
-import Movie from './pages/Movie'
 import { useState } from 'react'
+import { Outlet } from 'react-router-dom'  // Adaugă acest import
 import { SidebarContext } from './context/SlidebarContext';
+import Sidebar from './components/Slidebare/Slidebare';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
     <SidebarContext.Provider value={{ isOpen, setIsOpen }}>
-      <Movie/>
+      <div className="app-container">
+        <Sidebar />
+        <div className="main-content">
+          <Outlet />  {/* Aici se vor afișa componentele din rute */}
+        </div>
+      </div>
     </SidebarContext.Provider>
   )
 }
 
-export default App
+export default App;
