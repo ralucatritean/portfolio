@@ -7,15 +7,21 @@ import Sidebar from "../components/Slidebare/Slidebare";
 
 function Movie() {
     return <div>
-        <Sidebar/>
-        <MovieProvider>
+        <div className="container">
+            <Sidebar>
+                <div></div>
+            </Sidebar>
             <div className="contentPage">
-                <Routes>
-                    <Route path="/Movie" element={<Home />} />
-                    <Route path="/favorites" element={<Favorite />} />
-                </Routes>
+                <MovieProvider>
+                    <div className="content">
+                        <Routes>
+                            <Route path="/Movie" element={<Home />} />
+                            <Route path="/favorites" element={<Favorite />} />
+                        </Routes>
+                    </div>
+                </MovieProvider>
             </div>
-        </MovieProvider>
+        </div>
     </div>
 }
 export default Movie;

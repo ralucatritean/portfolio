@@ -51,25 +51,31 @@ function Favorite() {
     // Debug pentru a vedea ce avem în state
     console.log("Movies with details:", favorites.length);
 
-    if (favorites.length>0) {
+    if (favorites.length > 0) {
         return (
-            <div className="favorites-content">
-                 <NavBar />
-                <div className="movies-grid">
+            <div className="home">
+                <NavBar />
+                <div className="favorites-content">
+                    <div className="movies-grid">
                         {moviesWithDetails.map((movie) => (
                             <MovieCard movie={movie} key={movie.id} />
                         ))}
+                    </div>
                 </div>
             </div>
 
         );
     } else {
         return (
-            <div className="favorites-content">
+            <div className="home">
                 <NavBar />
-                <h2>Nici un film adaugat la favorite</h2>
-                <p>Incepe sa aduagi filme la favorite si vor aparea aici</p>
+                <div className="favorites-content">
+
+                    <h2>Nici un film adaugat la favorite</h2>
+                    <p>Incepe sa aduagi filme la favorite si vor aparea aici</p>
+                </div>
             </div>
+
         );
     }
 }
