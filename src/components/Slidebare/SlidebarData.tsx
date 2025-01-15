@@ -34,6 +34,6 @@ export const SidebarData = [
     {
         title: "Movie",
         icon: <img className='iconImage' src={Movie} alt="Movie" />,
-        link: "/movie"
+        link: "portfolio/movie"
     },
 ]
