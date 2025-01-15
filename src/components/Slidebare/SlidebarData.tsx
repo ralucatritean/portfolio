@@ -6,7 +6,7 @@ import SHOP from "../../assets/images/shop.png";
 import Movie from "../../assets/images/movie.png";
 
 export const SidebarData = [
-    {
+   /* {
         title: "CV",
         icon: <img className='iconImage' src={CV} alt="CV Icon" />,
         link: "/myCvPage"
@@ -30,7 +30,7 @@ export const SidebarData = [
         title: "Shop",
         icon: <img className='iconImage' src={SHOP} alt="Shop" />,
         link: "/shop"
-    },
+    },*/
     {
         title: "Movie",
         icon: <img className='iconImage' src={Movie} alt="Movie" />,
