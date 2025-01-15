@@ -70,17 +70,16 @@
     border-bottom: 2px solid black;
   }
   .contentPage{
-    display: flex;
     justify-content: center; 
     align-items: baseline;  
     width: 100vw;
     height: 100vh;    
   }
   .openContainer{
-    margin-left: 220px;
+    margin-left: 240px;
   }
   .closeContainer{
-    margin-left: 40px;
+    margin-left: 80px;
   }
   .myProfile{
     display: flex;

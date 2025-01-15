@@ -21,7 +21,7 @@ const router = createBrowserRouter([
     element: <App />,
     children: [
       {
-        path: "portfolio//myCvPage",
+        path: "portfolio/myCvPage",
         element: <MyCvPage />,
       },
       {
