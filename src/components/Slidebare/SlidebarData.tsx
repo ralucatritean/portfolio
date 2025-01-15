@@ -6,11 +6,11 @@ import SHOP from "../../assets/images/shop.png";
 import Movie from "../../assets/images/movie.png";
 
 export const SidebarData = [
-   /* {
+   {
         title: "CV",
         icon: <img className='iconImage' src={CV} alt="CV Icon" />,
-        link: "/myCvPage"
-    },
+        link: "portfolio/myCvPage"
+    },/*
     {
         title: "Tic Tac Toc",
         icon: <img className='iconImage' src={Game1} alt="Tic Tac Toc Game" />,
@@ -34,6 +34,6 @@ export const SidebarData = [
     {
         title: "Movie",
         icon: <img className='iconImage' src={Movie} alt="Movie" />,
-        link: "/movie"
+        link: "portfolio/movie"
     },
 ]

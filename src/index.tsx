@@ -11,37 +11,37 @@ import SnakeGame from './pages/SnakeGame';
 import Favorite from './components/Movie/Favorite';
 import Home from './components/Movie/Home';
 import {
-  createHashRouter,
+  createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/portfolio/",
     element: <App />,
     children: [
       {
-        path: "myCvPage",
+        path: "portfolio/myCvPage",
         element: <MyCvPage />,
       },
       {
-        path: "ticTacToe",
+        path: "portfolio/ticTacToe",
         element: <TicTacToe />,
       },
       {
-        path: "memoryGame",
+        path: "portfolio/memoryGame",
         element: <MemoryGame />,
       },
       {
-        path: "snakeGame",
+        path: "portfolio/snakeGame",
         element: <SnakeGame />,
       },
       {
-        path: "shop",
+        path: "portfolio/shop",
         element: <Shop />,
       },
       {
-        path: "movie",
+        path: "portfolio/movie",
         element: <Movie />,
         children: [
           {

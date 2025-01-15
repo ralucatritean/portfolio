@@ -8,7 +8,7 @@ function NavBar() {
             <li>
                 <Link
                     to="/movie"
-                    className={location.pathname === '/movie' ? 'active' : ''}
+                    className={location.pathname === 'portfolio/movie' ? 'active' : ''}
                 >
                     Home
                 </Link>
@@ -17,7 +17,7 @@ function NavBar() {
             <li>
                 <Link
                     to="/movie/favorites"
-                    className={location.pathname === '/movie/favorites' ? 'active' : ''}
+                    className={location.pathname === 'portfolio/movie/favorites' ? 'active' : ''}
                 >
                     Favorite
                 </Link>
