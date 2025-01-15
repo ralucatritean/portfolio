@@ -11,29 +11,29 @@ import SnakeGame from './pages/SnakeGame';
 import Favorite from './components/Movie/Favorite';
 import Home from './components/Movie/Home';
 import {
-  createBrowserRouter,
+  createHashRouter,
   RouterProvider,
 } from "react-router-dom";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
     children: [
       {
-        path: "/myCvPage",
+        path: "myCvPage",
         element: <MyCvPage />,
       },
       {
-        path: "/ticTacToe",
+        path: "ticTacToe",
         element: <TicTacToe />,
       },
       {
-        path: "/memoryGame",
+        path: "memoryGame",
         element: <MemoryGame />,
       },
       {
-        path: "/snakeGame",
+        path: "snakeGame",
         element: <SnakeGame />,
       },
       {
