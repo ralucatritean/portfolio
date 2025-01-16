@@ -129,9 +129,9 @@ function MyCvPage() {
             <div className="footer">
                 <div className="center-footer">
                     <div className="left-footer">
-                        <p><img className='iconFooterImage' src={phone} alt="phone" /> +4071503030</p>
+                        <p><img className='iconFooterImage' src={phone} alt="phone" /> +40741503030</p>
                         <p><img className='iconFooterImage' src={mail} alt="mail" /> ralucatritean@gmail.com</p>
-                        <p><img className='iconFooterImage' src={linkedin} alt="linkedin" /> linkedin.com/in/raluca-grama</p>
+                        <p><img className='iconFooterImage' src={linkedin} alt="linkedin" /><a href="https://www.linkedin.com/in/raluca-georgiana-grama/" >Grama Raluca</a></p>
                         <p><img className='iconFooterImage' src={adress} alt="adress" /> Târgu Mureș, Mureș, Romania</p>
                     </div>
                 </div>

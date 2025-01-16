@@ -66,7 +66,9 @@ body {
     border-right: 5px solid #0077B6;
 }
 
-
+a{
+    color: white;
+}
 h2 {
     font-size: 18px;
     margin-top: 20px;
